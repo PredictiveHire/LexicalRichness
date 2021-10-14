@@ -34,9 +34,9 @@ setup(
     long_description=readme + '\n\n' + history,
     include_package_data=True,
     keywords=['lexical diversity', 'lexical richness', 'vocabulary diversity', 'lexical density', 'lexical'],
-    name='lexicalrichness',
-    packages=find_packages(include=['lexicalrichness']),
-    url='https://github.com/LSYS/lexicalrichness',
-    download_url='https://github.com/LSYS/lexicalrichness/archive/0.1.3.tar.gz',
-    version='0.1.3'
+    name='lexical-diversity',
+    packages=find_packages(include=['lexical-diversity']),
+    url='https://github.com/PredictiveHire/ph-lexical-diversity',
+    # download_url='https://github.com/LSYS/lexicalrichness/archive/0.1.3.tar.gz',
+    version='0.1.4'
 )

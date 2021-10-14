@@ -1,0 +1,24 @@
+steps:
+  - block: 'Confirm Release Version'
+    prompt: 'Fill out the version for release'
+    fields:
+      - text: 'Release Version'
+        key: 'python-package-release-version'
+        hint: 'Please confirm the release version, e.g., 1.9'
+        default: 'x.x'
+
+  - wait
+  - block: 'Publish to Fury'
+  - label: ":shipit: Publish"
+    command:
+      - python3 setup.py sdist
+      - export RELEASE_VER=$$(buildkite-agent meta-data get python-package-release-version)
+      - curl -F package=@dist/lexical_diversity-$${RELEASE_VER}.tar.gz https://${PH_FURY_UPLOAD_KEY}@push.fury.io/predictivehire/
+    agents:
+      queue: small-instance
+
+  - wait
+  - label: ":tada: Done"
+    command: "echo done!"
+    agents:
+          queue: small-instance

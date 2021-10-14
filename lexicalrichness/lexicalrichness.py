@@ -362,7 +362,7 @@ class LexicalRichness(object):
             float
         """
 
-        def sub_mtld(self, threshold, reverse=False):
+        def sub_mtld(self, threshold, min_tokens=10, reverse=False):
             """
             Parameters
             ----------
@@ -392,7 +392,8 @@ class LexicalRichness(object):
                 if ttr <= threshold:
                     word_counter = 0
                     terms = set()
-                    factor_count += 1
+                    if len(terms) >= min_tokens:
+                        factor_count += 1
 
             # partial factors for the last segment computed as the ratio of how far away ttr is from
             # unit, to how far away threshold is to unit
