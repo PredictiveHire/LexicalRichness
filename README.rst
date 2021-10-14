@@ -1,6 +1,6 @@
-===============
+================
 LexicalRichness
-===============
+================
 
 
 .. image:: https://img.shields.io/pypi/v/lexicalrichness.svg
