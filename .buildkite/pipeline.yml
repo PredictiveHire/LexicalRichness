@@ -13,7 +13,7 @@ steps:
     command:
       - python3 setup.py sdist
       - export RELEASE_VER=$$(buildkite-agent meta-data get python-package-release-version)
-      - curl -F package=@dist/lexical_diversity-$${RELEASE_VER}.tar.gz https://${PH_FURY_UPLOAD_KEY}@push.fury.io/predictivehire/
+      - curl -F package=@dist/lexical-diversity-$${RELEASE_VER}.tar.gz https://${PH_FURY_UPLOAD_KEY}@push.fury.io/predictivehire/
     agents:
       queue: small-instance
 
