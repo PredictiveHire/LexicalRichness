@@ -1,6 +1,6 @@
 Metadata-Version: 1.1
 Name: lexical_diversity
-Version: 0.1.5
+Version: 0.1.6
 Summary: A small module to compute textual lexical richness
 Home-page: https://github.com/PredictiveHire/ph-lexical-diversity
 Author: Lucas Shen YS

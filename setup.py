@@ -37,5 +37,5 @@ setup(
     name='lexical_diversity',
     packages=find_packages(include=['lexical_diversity']),
     url='https://github.com/PredictiveHire/ph-lexical-diversity',
-    version='0.1.5'
+    version='0.1.6'
 )
