@@ -342,7 +342,7 @@ class LexicalRichness(object):
         return mattr
 
 
-    def mtld(self, threshold=0.72):
+    def mtld(self, threshold=0.72, min_tokens=10):
         """ Measure of textual lexical diversity, computed as the mean length of sequential words in
             a text that maintains a minimum threshold TTR score.
 
@@ -362,7 +362,7 @@ class LexicalRichness(object):
             float
         """
 
-        def sub_mtld(self, threshold, min_tokens=10, reverse=False):
+        def sub_mtld(self, threshold, min_tokens, reverse=False):
             """
             Parameters
             ----------
@@ -410,8 +410,8 @@ class LexicalRichness(object):
 
             return len(self.wordlist) / factor_count
 
-        forward_measure = sub_mtld(self, threshold, reverse=False)
-        reverse_measure = sub_mtld(self, threshold, reverse=True)
+        forward_measure = sub_mtld(self, threshold, min_tokens, reverse=False)
+        reverse_measure = sub_mtld(self, threshold, min_tokens, reverse=True)
 
         if sys.version_info[0] == 3:
             mtld = mean((forward_measure, reverse_measure))
