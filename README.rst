@@ -18,14 +18,14 @@ Installation
 
 .. code-block:: bash
 
-	$ pip install lexicalrichness
+	$ pip install lexical_diversity
 
 Quickstart
 ----------
 
 .. code-block:: python
 
-	>>> from lexicalrichness import LexicalRichness
+	>>> from lexical_diversity import LexicalRichness
 
 	# text example
 	>>> text = """Measure of textual lexical diversity, computed as the mean length of sequential words in
